@@ -19,3 +19,14 @@
 
 ### Задание 4
 Установить и удалить deb-пакет с помощью dpkg.
+
+sudo wget https://download.docker.com/linux/ubuntu/dists/jammy/pool/stable/amd64/docker-ce-cli_20.10.13~3-0~ubuntu-jammy_amd64.deb
+
+sudo dpkg -i docker-ce-cli_20.10.133-0ubuntu-jammy_amd64.deb
+
+sudo dpkg -r docker-ce-cli
+
+### Задание 5
+Выложить историю команд в терминале ubuntu
+
+![alt text](image-3.png)
