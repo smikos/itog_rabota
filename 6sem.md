@@ -237,3 +237,14 @@ VALUES ('Вода', '2021-05-11', 'туда', 3),
 ('Огонь', '2021-11-16', "молодец", 3);
 
 
+### Задание 10
+Удалить из таблицы верблюдов, т.к. верблюдов решили перевезти в другой питомник на зимовку. Объединить таблицы лошади, и ослы в одну таблицу.
+
+SET SQL_SAFE_UPDATES = 0;
+
+DELETE FROM camels;
+
+SELECT Name, Birthday, Commands FROM horses
+
+UNION SELECT  Name, Birthday, Commands FROM donkeys;
+
