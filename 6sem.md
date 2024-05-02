@@ -115,3 +115,125 @@ CREATE TABLE cats
 
 );
 
+### Задание 9
+Заполнить низкоуровневые таблицы именами(животных), командами которые они выполняют и датами рождения.
+
+INSERT INTO cats (Name, Birthday, Commands, Genus_id)
+
+VALUES ('Рыцарь', '2020-10-12', 'кс', 1),
+
+('Варвар', '2018-05-01', "назад!", 1),  
+
+('Маг', '2019-04-10', "", 1); 
+
+
+
+CREATE TABLE dogs 
+(       
+
+    Id INT AUTO_INCREMENT PRIMARY KEY, 
+    Name VARCHAR(20), 
+    Birthday DATE,
+    Commands VARCHAR(50),
+    Genus_id int,
+    Foreign KEY (Genus_id) REFERENCES home_animals (Id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+INSERT INTO dogs (Name, Birthday, Commands, Genus_id)
+
+VALUES ('Стрелок', '2019-04-10', 'ко мне, лежать, лапу, голос', 2),
+
+('Командир', '2015-07-12', "сидеть, лежать, лапу", 2),  
+
+('Волк', '2013-03-11', "сидеть, лежать, лапу, след, фас", 2), 
+
+('Барбос', '2020-11-10', "сидеть, лежать, фу, место", 2);
+
+CREATE TABLE hamsters 
+(       
+
+    Id INT AUTO_INCREMENT PRIMARY KEY, 
+    Name VARCHAR(20), 
+    Birthday DATE,
+    Commands VARCHAR(50),
+    Genus_id int,
+    Foreign KEY (Genus_id) REFERENCES home_animals (Id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+INSERT INTO hamsters (Name, Birthday, Commands, Genus_id)
+
+VALUES ('Овервоч', '2021-03-12', 'в шар', 3),
+
+('Овервоч2', '2022-01-01', "ульта", 3),  
+
+('Макри', '2021-05-01', NULL, 3), 
+
+('Гендзи', '2021-03-03', NULL, 3);
+
+
+CREATE TABLE horses 
+(       
+
+    Id INT AUTO_INCREMENT PRIMARY KEY, 
+    Name VARCHAR(20), 
+    Birthday DATE,
+    Commands VARCHAR(50),
+    Genus_id int,
+    Foreign KEY (Genus_id) REFERENCES packed_animals (Id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+INSERT INTO horses (Name, Birthday, Commands, Genus_id)
+
+VALUES ('Зельда', '2019-03-13', 'бегом, шагом', 1),
+
+('Линк', '2014-05-16', "бегом, шагом, хоп", 1),  
+
+('Гарон', '2011-02-13', "бегом, шагом, хоп, брр", 1), 
+
+('Трифорс', '2021-10-15', "бегом, шагом, хоп", 1);
+
+
+CREATE TABLE donkeys 
+(       
+
+    Id INT AUTO_INCREMENT PRIMARY KEY, 
+    Name VARCHAR(20), 
+    Birthday DATE,
+    Commands VARCHAR(50),
+    Genus_id int,
+    Foreign KEY (Genus_id) REFERENCES packed_animals (Id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+INSERT INTO donkeys (Name, Birthday, Commands, Genus_id)
+
+VALUES ('рисковый', '2010-03-11', NULL, 2),
+
+('бывалый', '2021-04-11', "", 2),  
+
+('понимающий', '2020-05-17', "", 2), 
+
+('не понимающий', '2021-11-11', NULL, 2);
+
+CREATE TABLE camels 
+(   
+
+    Id INT AUTO_INCREMENT PRIMARY KEY, 
+
+    Name VARCHAR(20), 
+    Birthday DATE,
+    Commands VARCHAR(50),
+    Genus_id int,
+    Foreign KEY (Genus_id) REFERENCES packed_animals (Id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+INSERT INTO camels (Name, Birthday, Commands, Genus_id)
+
+VALUES ('Вода', '2021-05-11', 'туда', 3),
+
+('Земля', '2015-06-11', "сюда", 3),  
+
+('Воздух', '2014-06-22', "обратно", 3), 
+
+('Огонь', '2021-11-16', "молодец", 3);
+
+
